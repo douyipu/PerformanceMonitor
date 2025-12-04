@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="性能监控SDK测试"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="24dp" />
+
+    <TextView
+        android:id="@+id/tvStatus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="状态: 未启动"
+        android:textSize="16sp"
+        android:layout_marginBottom="16dp" />
+
+    <TextView
+        android:id="@+id/tvFps"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="FPS: --"
+        android:textSize="20sp"
+        android:textColor="#4CAF50"
+        android:layout_marginBottom="8dp" />
+
+    <TextView
+        android:id="@+id/tvDropFrames"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="丢帧: --"
+        android:textSize="16sp"
+        android:layout_marginBottom="8dp" />
+
+    <TextView
+        android:id="@+id/tvDropLevel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="丢帧分布: --"
+        android:textSize="14sp"
+        android:layout_marginBottom="24dp" />
+
+    <TextView
+        android:id="@+id/tvAnr"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="ANR: 无"
+        android:textSize="14sp"
+        android:textColor="#F44336"
+        android:maxLines="5"
+        android:ellipsize="end"
+        android:layout_marginBottom="24dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="16dp">
+
+        <Button
+            android:id="@+id/btnStart"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="开始监控"
+            android:layout_marginEnd="8dp" />
+
+        <Button
+            android:id="@+id/btnStop"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="停止监控" />
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btnSimulateJank"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="模拟卡顿 (主线程sleep 200ms)"
+        android:layout_marginBottom="8dp" />
+
+    <Button
+        android:id="@+id/btnSimulateAnr"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="模拟ANR (主线程sleep 6秒)"
+        android:backgroundTint="#F44336" />
+
+</LinearLayout>
