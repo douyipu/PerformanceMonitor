@@ -204,10 +204,3 @@ MonitorManager.start()
 ### 📄 License
 
 MIT License
-
----
-
-## 📹 Demo
-
-[演示视频 / Demo Video](./demo.mp4)
-
